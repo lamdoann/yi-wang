@@ -1,0 +1,63 @@
+body {
+  margin: 30px;
+  font-family: sans-serif;
+}
+
+.description {
+  max-width: 800px;
+}
+table,
+td {
+    border: 0.5px dashed #333;
+}
+
+.chart-footer {
+  font-style: italic;
+  font-size: 10pt;
+  color: #aaa;
+}
+
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+}
+
+.line.line--small {
+  stroke-width: 2;
+}
+
+.line.line--average {
+    stroke: #2196f3;
+    stroke-width: 2;
+    stroke-dasharray: 2 4;
+}
+  
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.dot {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 0;
+}
+.dot.dot--highlight {
+  fill: #ffab00;
+  stroke-width: 1;
+}
+
+.axis .axis-legend {
+  fill: #000000;
+  font-size: 16px;
+}
+
+.brush rect.selection {
+  fill: #ffaaaa;
+}
+
+.average text {
+  fill: grey;
+  font-size: 10px;
+}

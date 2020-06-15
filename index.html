@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Apple Gross Merchandise</title>
+
+        <link rel="stylesheet" href="./css/main.css" />
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+    </head>
+
+<body> 
+    
+    <div class="chart">
+    <h1>Apple Gross Merchandise Value Trend on Alibaba E-Commerce Platform  </h1>
+    <div class="description">Y axis marks the Gross Merchandise Value in CNY currency and X axis is time from 2015 to 2018 </div>
+    <form>
+        <label>
+            <input type="checkbox" id="form_deviation" name="deviation" value="deviation"> 
+            2 standard deviation from the average
+        </label>
+    </form>
+    <div id="chart"></div>
+    <div class="chart-footer">By <a href="https://johnguerra.co">Peter Yi Wang</a>.
+        <br>
+        <strong>Source</strong>: <a href="">Yippit Data</a>
+    </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+    Apple Gross Merchandise Value 2015 to 2018
+    <br>
+    <br>
+    Here we have E-commerce GMV (Gross Merchandice Value) data collected by Yippit, which is a third party data agency that focuses on providing online platform statistics. Specifically, in this case, the viewer is able to visualize the trend of change of Apple GMV (sales) on Alibaba E-commerce platfrom from October, 2015 to April, 2020.
+    The visualization of E-commerce data helps the viewer to view the progression of change of the GMV data through chronological lenses.
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h2>Problem Abstraction</h2>
+
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Problem Abstraction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>What</td>
+                <td>Here we have E-commerce GMV (Gross Merchandice Value) data collected by Yippit, which is a third party data agency that focuses on providing online platform statistics. Specifically, in this case, the viewer is able to visualize the trend of change of Apple GMV (sales) on Alibaba E-commerce platfrom from 2015 to 2018. </td>
+            </tr>
+            <tr>
+                <td>Why</td>
+                <td>The visualization of E-commerce data helps the viewer to view the progression of change of the GMV data through chronological lenses.  </td>
+            </tr>         
+        <tr>
+                <td>How</td>
+                <td>Combination of lines, points and colors. </td>
+            </tr>
+                <tr>
+                <td>Chart Insight</td>
+                <td>Apple Sales in China on Alibaba rise over time, and shows strong seasonality in Q4 and Q1 of each year.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="./js/main.js"></script>
+    </body>
+</html>
