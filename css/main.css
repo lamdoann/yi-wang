@@ -21,6 +21,7 @@ td {
     fill: none;
     stroke: #ffab00;
     stroke-width: 3;
+    pointer-events: none;
 }
 
 .line.line--small {

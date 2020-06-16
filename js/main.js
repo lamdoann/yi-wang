@@ -128,7 +128,7 @@ function drawBrush() {
 
     const brush = d3.brushX()
         .extent([[0, 0], [innerWidth, brushHeight]])
-        .on("brush", brushed);
+        .on("brush end", brushed);
 
     const brushGroup = rootGroup.append("g")
         .attr("class", "brush")
@@ -149,22 +149,22 @@ function drawBrush() {
         .attr("d", lineGenerator);
 }
 
-
-
 function brushed() {
     const selection = d3.event.selection;
     const bisect = d3.bisector(d => +d.Month).right;
-    const selectionData = selection.map((x) => {
+    const selectionData = selection.map((x, i) => {
         const x0 = xScale.invert(x);
-        const i = bisect(DATA, x0);
-        let d = DATA[i];
-        let d0 = DATA[i - 1];
+        const index = bisect(DATA, x0);
+        let d = DATA[index];
+        let d0 = DATA[index - 1];
 
-        if (d0 && d) {
-            d = (+d0.Month - x0) > (+d.Month - x0) ? d : d0; 
+        if (i === 0) {
+            if (d && d0) {
+                return x0 <= +d0.Month ? d0 : d;
+            }
         }
 
-        return d || d0;
+        return d0 || d;
     });
 
     drawAverageLine(selectionData);
